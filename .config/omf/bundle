@@ -1,0 +1,5 @@
+package foreign-env
+package nvm
+package peco
+theme default
+theme scorphish
