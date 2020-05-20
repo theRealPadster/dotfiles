@@ -1,0 +1,25 @@
+{
+    "name": "Bright and Bold",
+    "comment": "Bright and Bold Scheme",
+    "use-theme-colors": false,
+    "foreground-color": "#ffffff",
+    "background-color": "#333333",
+    "palette": [
+        "#1b1d1e",
+        "#f92673",
+        "#86b413",
+        "#fdb436",
+        "#55c5d6",
+        "#8952fe",
+        "#465457",
+        "#cccccc",
+        "#343737",
+        "#ff5996",
+        "#b8e354",
+        "#feed6a",
+        "#8ceeff",
+        "#96b5b4",
+        "#ffffff",
+        "#899ca1"
+    ]
+}
