@@ -1,0 +1,95 @@
+# dotfiles
+Personal repository to host my custom config files. To use, install [yadm](https://yadm.io) and run `yadm pull` and `yadm bootstrap`.
+
+### MOC
+* Custom colours and layout
+![MOC theme screenshot](https://i.imgur.com/1gPMbvd.png)
+
+### Tilix (terminal) colour schemes
+* Added three terminal colour schemes: Bright-and-bold, Nord, and Mitsuyoshi (pictured below)
+![Mitsuyoshi scheme screenshot](https://i.imgur.com/TElTRhU.png)
+
+### Fish
+* Add [nvm](https://github.com/derekstavis/plugin-nvm) plugin
+* Add [foreign-env](https://github.com/oh-my-fish/plugin-foreign-env) plugin
+* Add [peco](https://github.com/oh-my-fish/plugin-peco) plugin
+* Set [Scorphish](https://github.com/oh-my-fish/theme-scorphish) theme
+  * Only show Node version in prompt
+* Set `$EDITOR` to `vim`
+* Automatically switch `node` version when find `.nvmrc` and revert to default version when none
+* Add aliases:
+  * `online`: `ping 8.8.8.8`
+  * `ip`: returns local ipv4 address
+* Linux-specific:
+  * Set `$VISUAL` to `gedit`
+  * Add aliases:
+    * `update`: `yay -Syu`
+* Mac-specific:
+  * Add aliases:
+    * `update`: `brew update`
+
+### Bash
+* Coloured `ls` output
+* Set `$EDITOR` to `vim`
+* Add `nvm` support
+* Automatically switch `node` version when find `.nvmrc` and revert to default version when none
+* Add aliases:
+  * `online`: `ping 8.8.8.8`
+  * `ip`: returns local ipv4 address
+* Linux-specific:
+  * Enabled vdpau
+  * Set `$VISUAL` to `gedit`
+  * Add Android SDK to `$PATH`
+  * Add aliases:
+    * `update`: `yay -Syu`
+* Mac-specific:
+  * Add aliases:
+    * `update`: `brew update`
+
+### Zsh
+* Coloured `ls` output
+* Add `nvm` support
+* Automatically switch `node` version when find `.nvmrc` and revert to default version when none
+* Set `$EDITOR` to `vim`
+* Set up proper keybinds
+* Set up history to be saved
+* Add aliases:
+  * `online`: `ping 8.8.8.8`
+  * `ip`: returns local ipv4 address
+* Linux-specific:
+  * Enable zsh-theme-powerlevel10k theme (needs to be installed from AUR)
+  * Enabled vdpau
+  * Set `$VISUAL` to `gedit`
+  * Add aliases:
+    * `update`: `yay -Syu`
+* Mac-specific:
+  * Add Mac-style keybinds
+  * Add aliases:
+    * `update`: `brew update`
+
+### Top
+* Got rid of tree view
+
+### Templates
+* CSS file
+  * Sets font to sans-serif
+* Empty text file
+* HTML file
+  * Contains !DOCTYPE, head, title, body
+* PHP file
+  * Same as HTML file, but with php block in the body
+* Shell script
+  * Just a blank bash script
+
+### Misc
+* `user-dirs.dirs`
+  * All standard GNOME folders, but replaced `Desktop` with `$HOME`, so a Desktop folder is not auto-created.
+
+#### TODO
+* Add ssh configs
+* Figure out how to remove unneeded files for OS types (e.g. Tilix configs on MacOS or iTerm2 configs on Linux)
+* Figure out how to remove this README.md so it's not just sitting in the home directory (using yadm hooks?)
+* Consolidate some of the shell configurations into single files instead of one per shell type/OS
+* Add `ll -> ls -l` alias
+* Figure out if I can do anything with the `50-mouse-acceleration.conf` file from [my old configs repo](https://github.com/theRealPadster/my-configs)
+* Finish documenting configs, such as the iTerm configs and screenrc
