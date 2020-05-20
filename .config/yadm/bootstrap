@@ -1,5 +1,14 @@
 #!/bin/sh
 
+# Init nvm-zsh submodule
+# Because Git submodule commands cannot operate without a work tree, they must
+# be run from within $HOME (assuming this is the root of your dotfiles)
+cd "$HOME"
+
+echo "Init submodules"
+yadm submodule update --recursive --init
+
+# Load in iTerm2 config
 system_type=$(uname -s)
 
 if [ "$system_type" = "Darwin" ]; then
