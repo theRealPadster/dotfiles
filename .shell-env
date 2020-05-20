@@ -1,0 +1,32 @@
+# Common to all OS types
+export EDITOR="vim"
+alias vi='vim'
+alias online='ping 8.8.8.8'
+alias ip="ifconfig | grep -Eo '([0-9]+\.){3}([0-9]+.)' | grep -Ev '255\$|(127.0.0.1)|(255.255.255.0)'"
+export SPICETIFY_CONFIG="$HOME/.config/spicetify"
+export PATH="$PATH:/usr/local/bin"
+
+# Load OS-specific configs
+case "$OSTYPE" in
+  darwin*)
+    # ...
+    export CLICOLOR=1
+    alias update='brew update'
+  ;;
+  linux*)
+    # ...
+    alias ls='ls --color=auto'
+    alias update='yay -Syu'
+    export LIBVA_DRIVER_NAME=vdpau
+    export VDPAU_DRIVER=nvidia
+    export VISUAL="gedit"
+
+    export PATH=$PATH:~/Android/Sdk
+    export PATH=$PATH:~/Android/Sdk/platform-tools
+    export PATH=$PATH:~/Android/Sdk/tools
+    export ANDROID_HOME=~/Android/Sdk
+  ;;
+  dragonfly*|freebsd*|netbsd*|openbsd*)
+    # ...
+  ;;
+esac

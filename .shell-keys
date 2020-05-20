@@ -1,0 +1,42 @@
+# no special keybinds for bash...
+if [ -n "$ZSH_VERSION" ]; then
+  # assume Zsh
+  # Load OS-specific configs
+  case "$OSTYPE" in
+    darwin*)
+      # alt+left
+      bindkey "^[b" backward-word
+      # alt+right
+      bindkey "^[f" forward-word
+      # ctrl+backspace
+      # bindkey "^H" backward-kill-word
+      # alt+"del"
+      bindkey "^[^H" kill-word
+      # Fn+"del"
+      bindkey "^[[3~" delete-char
+      # cmd+"del"
+      bindkey "^U" backward-kill-line
+      # cmd+left
+      bindkey "^A" beginning-of-line
+      # cmd+right
+      bindkey "^E" end-of-line
+    ;;
+    linux*)
+      # ctrl+left
+      bindkey "^[[1;5D" backward-word
+      # ctrl+right
+      bindkey "^[[1;5C" forward-word
+      # ctrl+backspace
+      bindkey "^H" backward-kill-word
+      # ctrl+del
+      bindkey "^[[3;5~" kill-word
+    ;;
+    dragonfly*|freebsd*|netbsd*|openbsd*)
+      # ...
+    ;;
+  esac
+elif [ -n "$BASH_VERSION" ]; then
+  # assume Bash
+else
+  # assume something else
+fi

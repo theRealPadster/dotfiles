@@ -34,6 +34,7 @@ switch (uname)
         set -gx VISUAL "gedit"
     case Darwin
         alias update 'brew update'
+        # shopify-app-cli
         source ~/.shopify-app-cli/shopify.fish
     case FreeBSD NetBSD DragonFly
         echo Hi Beastie!

@@ -56,23 +56,23 @@ source ~/.auto-nvm.sh
 # Zsh doesn't use PROMPT_COMMAND, so trigger it here
 precmd() { eval "$PROMPT_COMMAND" }
 
-# Other stuff
-export EDITOR="vim"
-alias vi='vim'
-alias online='ping 8.8.8.8'
-alias ip="ifconfig | grep -Eo '([0-9]+\.){3}([0-9]+.)' | grep -Ev '255\$|(127.0.0.1)|(255.255.255.0)'"
-export SPICETIFY_CONFIG="$HOME/.config/spicetify"
-export PATH="$PATH:/usr/local/bin"
+# Load env/export/aliases
+source ~/.shell-env
+# Load key bindings
+source ~/.shell-keys
 
-# Load OS-specific configs
+# Load other OS-specific configs
 case "$OSTYPE" in
   darwin*)
-    # ...
-    source ~/.zshrc-mac.zshrc
+    # shopify-app-cli
+    [ -f ~/.shopify-app-cli/shopify.sh ] && source ~/.shopify-app-cli/shopify.sh
   ;;
   linux*)
-    # ...
-    source ~/.zshrc-linux.zshrc
+    # Load theme
+    export p9ktheme=/usr/share/zsh-theme-powerlevel10k/powerlevel9k.zsh-theme
+    [[ ! -f $p9ktheme ]] || source $p9ktheme
+    # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+    [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
   ;;
   dragonfly*|freebsd*|netbsd*|openbsd*)
     # ...

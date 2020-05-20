@@ -93,3 +93,5 @@ Personal repository to host my custom config files. To use, install [yadm](https
 * Add `ll -> ls -l` alias
 * Figure out if I can do anything with the `50-mouse-acceleration.conf` file from [my old configs repo](https://github.com/theRealPadster/my-configs)
 * Finish documenting configs, such as the iTerm configs and screenrc
+* Enable p10k theme on macos?
+* Update Fish configs to use the common shell files if possible
