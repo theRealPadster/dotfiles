@@ -1,5 +1,5 @@
 # dotfiles
-Personal repository to host my custom config files. To use, install [yadm](https://yadm.io) and run `yadm pull` and `yadm bootstrap`.
+Personal repository to host my custom config files. To use, install [yadm](https://yadm.io) and run `yadm clone https://github.com/theRealPadster/dotfiles`. If it complains that conflicting dotfiles are present, delete them and the `.config/yadm folder`, and run it again.
 
 ### MOC
 * Custom colours and layout
@@ -20,6 +20,7 @@ Personal repository to host my custom config files. To use, install [yadm](https
 * Add aliases:
   * `online`: `ping 8.8.8.8`
   * `ip`: returns local ipv4 address
+  * (`ll` alias is already built into Fish)
 * Linux-specific:
   * Set `$VISUAL` to `gedit`
   * Add aliases:
@@ -36,6 +37,7 @@ Personal repository to host my custom config files. To use, install [yadm](https
 * Add aliases:
   * `online`: `ping 8.8.8.8`
   * `ip`: returns local ipv4 address
+  * `ll`: `ls -l`
 * Linux-specific:
   * Enabled vdpau
   * Set `$VISUAL` to `gedit`
@@ -56,6 +58,7 @@ Personal repository to host my custom config files. To use, install [yadm](https
 * Add aliases:
   * `online`: `ping 8.8.8.8`
   * `ip`: returns local ipv4 address
+  * `ll`: `ls -l`
 * Linux-specific:
   * Enable zsh-theme-powerlevel10k theme (needs to be installed from AUR)
   * Enabled vdpau
@@ -68,7 +71,7 @@ Personal repository to host my custom config files. To use, install [yadm](https
     * `update`: `brew update`
 
 ### Top
-* Got rid of tree view
+* Get rid of tree view
 
 ### Templates
 * CSS file
@@ -90,8 +93,8 @@ Personal repository to host my custom config files. To use, install [yadm](https
 * Figure out how to remove unneeded files for OS types (e.g. Tilix configs on MacOS or iTerm2 configs on Linux)
 * Figure out how to remove this README.md so it's not just sitting in the home directory (using yadm hooks?)
 * Consolidate some of the shell configurations into single files instead of one per shell type/OS
-* Add `ll -> ls -l` alias
 * Figure out if I can do anything with the `50-mouse-acceleration.conf` file from [my old configs repo](https://github.com/theRealPadster/my-configs)
 * Finish documenting configs, such as the iTerm configs and screenrc
 * Enable p10k theme on macos?
 * Update Fish configs to use the common shell files if possible
+* Convert Fish aliases to [abbreviations](https://www.sean.sh/log/when-an-alias-should-actually-be-an-abbr/)
