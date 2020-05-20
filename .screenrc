@@ -1,0 +1,61 @@
+# Change default shell
+shell fish
+
+# Add 256 colour support
+term screen-256color
+
+# Big scrollback
+defscrollback 5000
+
+# No annoying startup message
+startup_message off
+
+# more useful status bar
+#hardstatus alwayslastline '%{= G}[ %{G}%H %{g}][%= %{= w}%?%-Lw%?%{= R}%n*%f %t%?%{= R}(%u)%?%{= w}%+Lw%?%= %{= g}][ %{y}Load: %l %{g}][%{B}%Y-%m-%d %{W}%c:%s %{g}]'
+
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{.kW}%-w%{.bW}%t [%n]%{-}%+w %=%{..G} %H %{..Y} %Y/%m/%d %c"
+
+# mouse tracking allows to switch region focus by clicking
+#mousetrack on
+
+# Setup screens
+chdir $HOME/Sources # All screens start in ~/Sources folder
+screen -t 'screen' 1 fish # Set up a default screen with Fish shell
+#screen -t 'server' 0 bash # Make first screen for running server
+#screen -t 'specs' 1 bash # Make screen for running tests
+#screen -t 'workspace' 2 bash # Make screen for general work i.e. running git commands
+
+# window numbering starts at 1 not 0
+select 0
+bind c screen 1
+bind 0 select 10
+
+# reset escape key to the default
+escape ^Aa
+# auxiliary register
+register S ^A
+# Alt + a produces ^A and acts as an escape key
+bindkey "^[a" process S
+#http://adb.cba.pl/gnu-screen-tips-page-my.html#howto-alt-key-as-escape
+
+#bindkey "\033\060" select 0
+#bindkey "\033\061" select 1
+
+bindkey "^[[1;5D" focus left
+bindkey "^[[1;5C" focus right
+bindkey "^[[1;5A" focus up
+bindkey "^[[1;5B" focus down
+
+# clear screen after closing a fullscreen app (e.g. vim)
+altscreen on
+
+#termcapinfo xterm* ti@:te@
+#termcapinfo xterm 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007:ti@:te@'
+#termcapinfo xterm*|rxvt* ‘ti@:te@’
+
+termcapinfo xterm 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007:ti@:te@'
+
+# copy screen buffer to clipboard
+bindkey -m ' ' eval 'stuff \040' 'writebuf' 'exec sh -c "/usr/bin/pbcopy < /tmp/screen-exchange"'
