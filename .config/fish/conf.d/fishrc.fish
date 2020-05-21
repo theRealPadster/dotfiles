@@ -30,7 +30,7 @@ end
 
 switch (uname)
     case Linux
-        echo Hi Linux!
+        exit
     case Darwin
         # shopify-app-cli
         source ~/.shopify-app-cli/shopify.fish
