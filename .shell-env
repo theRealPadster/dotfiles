@@ -8,26 +8,20 @@ export SPICETIFY_CONFIG="$HOME/.config/spicetify"
 export PATH="$PATH:/usr/local/bin"
 
 # Load OS-specific configs
-case "$OSTYPE" in
-  darwin*)
-    # ...
-    export CLICOLOR=1
-    alias update='brew update'
-  ;;
-  linux*)
-    # ...
-    alias ls='ls --color=auto'
-    alias update='yay -Syu'
-    export LIBVA_DRIVER_NAME=vdpau
-    export VDPAU_DRIVER=nvidia
-    export VISUAL="gedit"
+# TODO: horrible ugly hacky way to get cross-shell conditionals...
+# I create a .linux or .darwin file on yadm bootstrap and check if it exists
+# Can I make it better somehow?
+test -e ~/.darwin &&
+  export CLICOLOR=1 &&
+  alias update='brew update'
 
-    export PATH=$PATH:~/Android/Sdk
-    export PATH=$PATH:~/Android/Sdk/platform-tools
-    export PATH=$PATH:~/Android/Sdk/tools
-    export ANDROID_HOME=~/Android/Sdk
-  ;;
-  dragonfly*|freebsd*|netbsd*|openbsd*)
-    # ...
-  ;;
-esac
+test -e ~/.linux &&
+  alias ls='ls --color=auto' &&
+  alias update='yay -Syu' &&
+  export LIBVA_DRIVER_NAME=vdpau &&
+  export VDPAU_DRIVER=nvidia &&
+  export VISUAL="gedit" &&
+  export PATH="$PATH:~/Android/Sdk" &&
+  export PATH="$PATH:~/Android/Sdk/platform-tools" &&
+  export PATH="$PATH:~/Android/Sdk/tools" &&
+  export ANDROID_HOME=~/Android/Sdk

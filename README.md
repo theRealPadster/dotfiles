@@ -98,3 +98,4 @@ Personal repository to host my custom config files. To use, install [yadm](https
 * Enable p10k theme on macos?
 * Update Fish configs to use the common shell files if possible
 * Convert Fish aliases to [abbreviations](https://www.sean.sh/log/when-an-alias-should-actually-be-an-abbr/)
+* Make the cross-shell compatible .shell-env implementation not so disgusting
