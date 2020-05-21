@@ -1,9 +1,9 @@
 # Common to all OS types
 export EDITOR="vim"
-alias vi='vim'
-alias online='ping 8.8.8.8'
+alias vi="vim"
+alias online="ping 8.8.8.8"
 alias ip="ifconfig | grep -Eo '([0-9]+\.){3}([0-9]+.)' | grep -Ev '255\$|(127.0.0.1)|(255.255.255.0)'"
-alias ll='ls -l'
+alias ll="ls -l"
 export SPICETIFY_CONFIG="$HOME/.config/spicetify"
 export PATH="$PATH:/usr/local/bin"
 
@@ -13,11 +13,11 @@ export PATH="$PATH:/usr/local/bin"
 # Can I make it better somehow?
 test -e ~/.darwin &&
   export CLICOLOR=1 &&
-  alias update='brew update'
+  alias update="brew update"
 
 test -e ~/.linux &&
-  alias ls='ls --color=auto' &&
-  alias update='yay -Syu' &&
-  export LIBVA_DRIVER_NAME=vdpau &&
-  export VDPAU_DRIVER=nvidia &&
+  alias ls="ls --color=auto" &&
+  alias update="yay -Syu" &&
+  export LIBVA_DRIVER_NAME="vdpau" &&
+  export VDPAU_DRIVER="nvidia" &&
   export VISUAL="gedit"
