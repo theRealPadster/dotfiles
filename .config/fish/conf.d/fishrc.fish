@@ -1,7 +1,8 @@
 # Load env/export/aliases
 source ~/.shell-env
-# Load key bindings none for fish, and the syntax is incompatible
-#source ~/.shell-keys
+# Load key bindings
+# none for fish, and the syntax is incompatible
+# source ~/.shell-keys
 
 
 # Set up OMF Scorphish theme prompt
@@ -28,14 +29,13 @@ function nvm_prompt --on-variable PWD
     end
 end
 
-switch (uname)
-    case Linux
-        exit
-    case Darwin
-        # shopify-app-cli
-        source ~/.shopify-app-cli/shopify.fish
-    case FreeBSD NetBSD DragonFly
-        echo Hi Beastie!
-    case '*'
-        echo Hi, stranger!
-end
+# switch (uname)
+#     case Linux
+#         exit
+#     case Darwin
+#         exit
+#     case FreeBSD NetBSD DragonFly
+#         echo Hi Beastie!
+#     case '*'
+#         echo Hi, potato!
+# end

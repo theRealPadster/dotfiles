@@ -63,16 +63,15 @@ source ~/.shell-keys
 
 # Load other OS-specific configs
 case "$OSTYPE" in
-  darwin*)
-    # shopify-app-cli
-    [ -f ~/.shopify-app-cli/shopify.sh ] && source ~/.shopify-app-cli/shopify.sh
-  ;;
   linux*)
     # Load theme
     export p9ktheme=/usr/share/zsh-theme-powerlevel10k/powerlevel9k.zsh-theme
     [[ ! -f $p9ktheme ]] || source $p9ktheme
     # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
     [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+  ;;
+  darwin*)
+    # ...
   ;;
   dragonfly*|freebsd*|netbsd*|openbsd*)
     # ...
