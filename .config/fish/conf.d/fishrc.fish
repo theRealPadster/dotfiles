@@ -28,9 +28,6 @@ function nvm_prompt --on-variable PWD
     end
 end
 
-# Run it once on shell load
-nvm_prompt
-
 # switch (uname)
 #     case Linux
 #         exit
