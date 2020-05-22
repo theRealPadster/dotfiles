@@ -13,7 +13,7 @@ export PATH="$PATH:/usr/local/bin"
 # Can I make it better somehow?
 test -e ~/.darwin &&
   export CLICOLOR=1 &&
-  alias update="brew update"
+  alias update="brew update && brew outdated"
 
 test -e ~/.linux &&
   alias ls="ls --color=auto" &&
