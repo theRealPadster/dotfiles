@@ -15,7 +15,6 @@ set -g theme_display_ruby no
 # version when entering a directory without .nvmrc
 # https://stackoverflow.com/a/50378304
 # https://stackoverflow.com/a/48157087
-#
 function nvm_prompt --on-variable PWD
     if [ "$OLD_PWD" != "$PWD" ]
         set -g OLD_PWD "$PWD"
@@ -28,6 +27,9 @@ function nvm_prompt --on-variable PWD
         end
     end
 end
+
+# Run it once on shell load
+nvm_prompt
 
 # switch (uname)
 #     case Linux
