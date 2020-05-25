@@ -27,7 +27,7 @@ Personal repository to host my custom config files. To use, install [yadm](https
     * `update`: `yay -Syu`
 * Mac-specific:
   * Add aliases:
-    * `update`: `brew update && brew outdated`
+    * `update`: `brew update && echo '...' && brew outdated`
 
 ### Bash
 * Coloured `ls` output
@@ -46,7 +46,7 @@ Personal repository to host my custom config files. To use, install [yadm](https
     * `update`: `yay -Syu`
 * Mac-specific:
   * Add aliases:
-    * `update`: `brew update && brew outdated`
+    * `update`: `brew update && echo '...' && brew outdated`
 
 ### Zsh
 * Coloured `ls` output
@@ -68,7 +68,7 @@ Personal repository to host my custom config files. To use, install [yadm](https
 * Mac-specific:
   * Add Mac-style keybinds
   * Add aliases:
-    * `update`: `brew update && brew outdated`
+    * `update`: `brew update && echo '...' && brew outdated`
 
 ### Top
 * Get rid of tree view
