@@ -14,6 +14,7 @@ alias ip="ifconfig | grep -Eo '([0-9]+\.){3}([0-9]+.)' | grep -Ev '255\$|(127.0.
 alias ll='ls -l'
 export SPICETIFY_CONFIG="$HOME/.config/spicetify"
 export PATH="$PATH:/usr/local/bin"
+export PATH="$PATH:`yarn global bin`"
 
 ## Add nvm support
 export NVM_DIR="$HOME/.nvm"
