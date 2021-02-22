@@ -1,9 +1,9 @@
-set -gx EDITOR "vim"
-alias ip "ifconfig | grep -Eo '([0-9]+\.){3}([0-9]+.)' | grep -Ev '255\$|(127.0.0.1)|(255.255.255.0)'"
-alias online 'ping 8.8.8.8'
-set -gx SPICETIFY_CONFIG "$HOME/.config/spicetify"
-set -gx PATH "$PATH:/usr/local/bin"
-set -gx PATH "$PATH:`yarn global bin`"
+# Load env/export/aliases
+source ~/.shell-env
+# Load key bindings
+# none for fish, and the syntax is incompatible
+# source ~/.shell-keys
+
 
 # Set up OMF Scorphish theme prompt
 set -g theme_display_node yes
@@ -15,7 +15,6 @@ set -g theme_display_ruby no
 # version when entering a directory without .nvmrc
 # https://stackoverflow.com/a/50378304
 # https://stackoverflow.com/a/48157087
-#
 function nvm_prompt --on-variable PWD
     if [ "$OLD_PWD" != "$PWD" ]
         set -g OLD_PWD "$PWD"
@@ -29,15 +28,13 @@ function nvm_prompt --on-variable PWD
     end
 end
 
-switch (uname)
-    case Linux
-        alias update 'yay -Syu'
-        set -gx VISUAL "gedit"
-    case Darwin
-        alias update 'brew update'
-        source ~/.shopify-app-cli/shopify.fish
-    case FreeBSD NetBSD DragonFly
-        echo Hi Beastie!
-    case '*'
-        echo Hi, stranger!
-end
+# switch (uname)
+#     case Linux
+#         exit
+#     case Darwin
+#         exit
+#     case FreeBSD NetBSD DragonFly
+#         echo Hi Beastie!
+#     case '*'
+#         echo Hi, potato!
+# end

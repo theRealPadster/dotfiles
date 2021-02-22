@@ -27,7 +27,7 @@ Personal repository to host my custom config files. To use, install [yadm](https
     * `update`: `yay -Syu`
 * Mac-specific:
   * Add aliases:
-    * `update`: `brew update`
+    * `update`: `brew update && echo '...' && brew outdated`
 
 ### Bash
 * Coloured `ls` output
@@ -46,7 +46,7 @@ Personal repository to host my custom config files. To use, install [yadm](https
     * `update`: `yay -Syu`
 * Mac-specific:
   * Add aliases:
-    * `update`: `brew update`
+    * `update`: `brew update && echo '...' && brew outdated`
 
 ### Zsh
 * Coloured `ls` output
@@ -68,7 +68,7 @@ Personal repository to host my custom config files. To use, install [yadm](https
 * Mac-specific:
   * Add Mac-style keybinds
   * Add aliases:
-    * `update`: `brew update`
+    * `update`: `brew update && echo '...' && brew outdated`
 
 ### Top
 * Get rid of tree view
@@ -95,4 +95,7 @@ Personal repository to host my custom config files. To use, install [yadm](https
 * Consolidate some of the shell configurations into single files instead of one per shell type/OS
 * Figure out if I can do anything with the `50-mouse-acceleration.conf` file from [my old configs repo](https://github.com/theRealPadster/my-configs)
 * Finish documenting configs, such as the iTerm configs and screenrc
+* Enable p10k theme on macos?
+* Update Fish configs to use the common shell files if possible
 * Convert Fish aliases to [abbreviations](https://www.sean.sh/log/when-an-alias-should-actually-be-an-abbr/)
+* Make the cross-shell compatible .shell-env implementation not so disgusting
