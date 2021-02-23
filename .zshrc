@@ -58,6 +58,9 @@ precmd() { eval "$PROMPT_COMMAND" }
 
 # Load env/export/aliases
 source ~/.shell-env
+# load zsh-specific env
+export PATH="$PATH:`yarn global bin`"
+
 # Load key bindings
 source ~/.shell-keys
 
