@@ -3,7 +3,7 @@ source ~/.shell-env
 # Load key bindings
 # none for fish, and the syntax is incompatible
 # source ~/.shell-keys
-set -Ua fish_user_paths (yarn global bin)
+#set -Ua fish_user_paths (yarn global bin)
 
 # Set up OMF Scorphish theme prompt
 set -g theme_display_node yes

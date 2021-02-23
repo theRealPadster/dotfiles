@@ -16,7 +16,7 @@ source ~/.auto-nvm.sh
 # Load env/export/aliases
 source ~/.shell-env
 # load bash-specific env
-export PATH="$PATH:`yarn global bin`"
+#export PATH="$PATH:`yarn global bin`"
 
 # Load key bindings (no special keybinds for bash)
 source ~/.shell-keys
