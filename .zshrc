@@ -58,6 +58,25 @@ precmd() { eval "$PROMPT_COMMAND" }
 
 # Load env/export/aliases
 source ~/.shell-env
+# load zsh-specific env
+#export PATH="$PATH:`yarn global bin`"
+
+if [[ "$TERM" == screen* ]]; then
+  screen_set_window_title () {
+    # if [[ -n "$BASH_COMMAND" ]];
+    # then
+    # local HPWD="$BASH_COMMAND"
+    # else
+    local HPWD="${PWD##*/}"
+    # fi
+    # case $HPWD in
+    #   $HOME) HPWD="~";;
+    #   $HOME/*) HPWD="~${HPWD#$HOME}";;
+    # esac
+    printf '\ek%s\e\\' "$HPWD"
+  }
+  PROMPT_COMMAND="screen_set_window_title; $PROMPT_COMMAND"
+fi
 
 # Load key bindings
 source ~/.shell-keys

@@ -28,6 +28,36 @@ function nvm_prompt --on-variable PWD
     end
 end
 
+# Set screen window name to current directory (with ssh hostname if applicable)
+function prompt --on-event fish_prompt
+
+  switch "$TERM"
+  case 'screen*'
+
+    # prepend hostname to screen(1) title only if on ssh
+    if set -q SSH_CLIENT
+      set maybehost (hostname):
+    else
+      set maybehost ""
+    end
+
+    # set HPWD="${PWD##*/}"
+    set HPWD (basename $PWD)
+
+    # TODO: (status current-command) will give the currently running command,
+    # which would be nice to use instead of directory name if possible
+
+    # inside the function fish_title(), we need to
+    # force stdout to reach the terminal
+    #
+    # (status current-command) gives only the command name
+    # echo -ne "\\ek"$maybehost(status current-command)"\\e\\" > /dev/tty
+    echo -ne "\\ek"$maybehost$HPWD"\\e\\" > /dev/tty
+
+  end
+end
+
+
 # switch (uname)
 #     case Linux
 #         exit
