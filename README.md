@@ -87,6 +87,8 @@ Personal repository to host my custom config files. To use, install [yadm](https
 ### Misc
 * `user-dirs.dirs`
   * All standard GNOME folders, but replaced `Desktop` with `$HOME`, so a Desktop folder is not auto-created.
+* Paru config
+  * Add `NewsOnUpgrade`, `SudoLoop`, `RemoveMake = ask` options
 
 #### TODO
 * Add ssh configs
