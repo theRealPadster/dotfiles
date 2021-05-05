@@ -17,6 +17,7 @@ export PATH="$PATH:$HOME/.yarn/bin"
 # Can I make it better somehow?
 test -e ~/.darwin &&
   export CLICOLOR=1 &&
+  export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin" &&
   alias update="brew update && echo '...' && brew outdated"
 
 test -e ~/.linux &&
