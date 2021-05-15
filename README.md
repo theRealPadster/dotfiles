@@ -6,7 +6,7 @@ Personal repository to host my custom config files. To use, install [yadm](https
 ![MOC theme screenshot](https://i.imgur.com/1gPMbvd.png)
 
 ### Tilix (terminal) colour schemes
-* Added three terminal colour schemes: Bright-and-bold, Nord, and Mitsuyoshi (pictured below)
+* Added three terminal colour schemes: Bright-and-bold, Nord, Snazzy, and Mitsuyoshi (pictured below)
 ![Mitsuyoshi scheme screenshot](https://i.imgur.com/TElTRhU.png)
 
 ### Fish
