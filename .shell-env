@@ -22,7 +22,7 @@ test -e ~/.darwin &&
 
 test -e ~/.linux &&
   alias ls="ls --color=auto" &&
-  alias update="yay -Syu" &&
+  alias update="paru -Syu" &&
   export LIBVA_DRIVER_NAME="vdpau" &&
   export VDPAU_DRIVER="nvidia" &&
   export VISUAL="gedit"
