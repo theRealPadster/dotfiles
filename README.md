@@ -57,7 +57,7 @@ Personal repository to host my custom config files. To use, install [yadm](https
 * Set up history to be saved
 * Add aliases:
   * `online`: `ping 8.8.8.8`
-  * `ip`: returns local ipv4 address
+  * `addr`: returns local ipv4 address
   * `ll`: `ls -l`
 * Linux-specific:
   * Enable zsh-theme-powerlevel10k theme (needs to be installed from AUR)
@@ -101,3 +101,5 @@ Personal repository to host my custom config files. To use, install [yadm](https
 * Update Fish configs to use the common shell files if possible
 * Convert Fish aliases to [abbreviations](https://www.sean.sh/log/when-an-alias-should-actually-be-an-abbr/)
 * Make the cross-shell compatible .shell-env implementation not so disgusting
+
+- Test out themes from https://mayccoll.github.io/Gogh/
