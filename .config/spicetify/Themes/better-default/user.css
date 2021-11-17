@@ -284,6 +284,13 @@ input {
 .spotify__os--is-macos .Root__top-bar {
     margin-top: 26px;
 }
+.spotify__os--is-linux .Root__top-bar {
+    margin-top: 6px;
+}
+.spotify__os--is-linux .Root__nav-bar,
+.spotify__os--is-linux .Root__main-view {
+    margin-top: 78px;
+}
 
 /** Window controls background */
 div#main {
@@ -311,4 +318,3 @@ div#main {
 .lSWQl_XnpXurz5WK2mpA {
     background-color: var(--spice-card);
 }
-
