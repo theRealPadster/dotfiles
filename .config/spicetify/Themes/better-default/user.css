@@ -1,0 +1,301 @@
+:root {
+    --player-bar-height: 105px;
+}
+
+.main-rootlist-rootlistDividerGradient {
+    background: unset;
+}
+
+.x-searchInput-searchInputSearchIcon,
+.x-searchInput-searchInputClearButton {
+    color: var(--spice-text) !important;
+}
+
+.main-home-homeHeader,
+.x-entityHeader-overlay,
+.x-actionBarBackground-background,
+.main-actionBarBackground-background,
+.main-entityHeader-overlay,
+.main-entityHeader-backgroundColor {
+    background-color: unset !important;
+    background-image: unset !important;
+}
+
+.main-playButton-PlayButton.main-playButton-primary {
+    color: white;
+}
+
+.connect-title,
+.connect-header {
+    display: none;
+}
+
+.connect-device-list {
+    margin: 0px -5px;
+}
+
+/* Remove Topbar background colour */
+.main-topBar-background {
+    background-color: unset !important;
+}
+.main-topBar-overlay {
+    background-color: var(--spice-main);
+}
+
+.main-entityHeader-shadow,
+.main-contextMenu-menu,
+.connect-device-list-container {
+    box-shadow: 0 4px 20px #21212130;
+}
+
+.main-trackList-playingIcon {
+    filter: grayscale(1);
+}
+
+span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
+    fill: black;
+}
+
+/* Full window artist background */
+.main-entityHeader-background.main-entityHeader-gradient {
+    opacity: 0.3;
+}
+
+.main-entityHeader-container.main-entityHeader-withBackgroundImage,
+.main-entityHeader-background,
+.main-entityHeader-background.main-entityHeader-overlay:after {
+    height: 100vh;
+}
+
+.main-entityHeader-withBackgroundImage .main-entityHeader-headerText {
+    justify-content: center;
+}
+
+.main-entityHeader-container.main-entityHeader-nonWrapped.main-entityHeader-withBackgroundImage {
+    padding-left: 9%;
+}
+
+.main-entityHeader-background.main-entityHeader-overlay:after {
+    background-image: linear-gradient(transparent, transparent),
+        linear-gradient(var(--spice-main), var(--spice-main));
+}
+
+.artist-artistOverview-overview .main-entityHeader-withBackgroundImage h1 {
+    font-size: 175px !important;
+    line-height: 175px !important;
+}
+
+/** Hightlight selected playlist */
+.main-rootlist-rootlistItemLink.main-rootlist-rootlistItemLinkActive {
+    background: var(--spice-button);
+    border-radius: 4px;
+    padding: 0 10px;
+    margin: 0 5px 0 -10px;
+}
+
+.main-navBar-navBarLinkActive {
+    background: var(--spice-button);
+}
+
+.main-contextMenu-menu {
+    background-color: var(--spice-button);
+}
+
+.main-contextMenu-menuHeading,
+.main-contextMenu-menuItemButton,
+.main-contextMenu-menuItemButton:not(.main-contextMenu-disabled):focus,
+.main-contextMenu-menuItemButton:not(.main-contextMenu-disabled):hover {
+    color: var(--spice-text);
+}
+
+.main-playPauseButton-button {
+    background-color: var(--spice-button);
+    color: white;
+}
+
+/** Queue page header */
+.queue-queue-title,
+.queue-playHistory-title {
+    color: var(--spice-text) !important;
+}
+
+/** Cards */
+.main-cardImage-imageWrapper {
+    background-color: transparent;
+}
+
+.main-rootlist-rootlistDivider {
+    background-color: unset;
+}
+
+.main-nowPlayingBar-nowPlayingBar {
+    height: var(--player-bar-height);
+}
+.main-card-card {
+    background: none;
+}
+.main-cardImage-image {
+    border-radius: 12px;
+}
+
+/* Remove create playlist and liked songs button */
+.main-createPlaylistButton-button,
+.main-collectionLinkButton-collectionLinkButton {
+    display: none;
+}
+
+/* Context menu */
+.main-contextMenu-menu {
+    background: var(--spice-card);
+}
+
+/* Play button */
+.main-playPauseButton-button {
+    color: var(--spice-player);
+}
+.main-playButton-PlayButton.main-playButton-primary {
+    color: var(--spice-main);
+}
+
+/* Sidebar buttons */
+.main-navBar-navBarLinkActive,
+.main-navBar-navBarLinkActive:focus,
+.main-navBar-navBarLinkActive:hover,
+.logo,
+.main-rootlist-rootlistItemLink.main-rootlist-rootlistItemLinkActive,
+.main-rootlist-rootlistItemLink:focus {
+    color: var(--spice-sidebar);
+}
+
+/* Scrollbar */
+.os-theme-spotify
+    > .os-scrollbar-vertical
+    > .os-scrollbar-track
+    > .os-scrollbar-handle {
+    border-radius: 4px;
+    width: 6px;
+    background-color: var(--spice-misc) !important;
+}
+.os-theme-spotify
+    > .os-scrollbar-vertical
+    > .os-scrollbar-track
+    > .os-scrollbar-handle:hover {
+    border-radius: 4px;
+    width: 6px;
+    background-color: var(--spice-button) !important;
+}
+
+/* Player */
+.main-nowPlayingBar-container {
+    border-top: none;
+}
+
+/* Topbar */
+.spotify__container--is-desktop:not(.fullscreen).spotify__os--is-windows
+    .body-drag-top {
+    height: 90px;
+    background: var(--spice-titlebar);
+}
+.Root__nav-bar {
+    margin-top: 90px;
+}
+.Root__main-view {
+    margin-top: 90px;
+}
+.Root__top-bar {
+    margin: 35px 0 0 -250px;
+}
+.main-userWidget-box {
+    display: none;
+}
+.main-navBar-navBar {
+    padding-top: 0;
+}
+.main-view-container__scroll-node-child-spacer {
+    display: none;
+}
+.main-topBar-background {
+    opacity: 0 !important;
+}
+.main-topBar-historyButtons .main-topBar-button {
+    background-color: transparent;
+}
+.RANP_Xq9O1O2VevAb3a8 {
+    background-color: var(--spice-main) !important;
+    border-radius: 5px;
+    color: white !important;
+}
+.cRcbfCF3jsPg0TEpeWb9 {
+    color: var(--spice-subtext);
+}
+.cRcbfCF3jsPg0TEpeWb9:hover {
+    background-color: #2d343b;
+}
+.main-type-mestoBold {
+    font-weight: normal;
+    text-transform: capitalize;
+}
+.main-trackList-trackListHeader {
+    position: unset;
+}
+.main-entityHeader-background.main-entityHeader-gradient {
+    opacity: 0.3;
+    position: fixed;
+}
+.main-trackList-trackListHeaderStuck.main-trackList-trackListHeader {
+    background: none;
+}
+.artist-artistDiscography-topBar {
+    position: static;
+    padding-top: 30px;
+    background-color: transparent !important;
+}
+.mlFBFMH4eIXfL4nis37W,
+.HZX6ozVldlime7kQvNZv {
+    padding-left: 0;
+}
+
+/** Text input */
+input {
+    background-color: var(--spice-main);
+    border-bottom: none;
+    border-radius: 5px !important;
+    color: var(--spice-text) !important;
+}
+
+/** Layout resizer */
+.LayoutResizer__resize-bar--resizing,
+.LayoutResizer__resize-bar:focus-within,
+.LayoutResizer__resize-bar:hover {
+    opacity: 0;
+}
+.LayoutResizer__resize-bar {
+    cursor: w-resize;
+}
+
+/** Window controls background */
+div#main {
+    background-image: linear-gradient(#4a5b6b, #4a5b6b);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 162px 37.5px;
+}
+
+/** Inconsistency fixes */
+.main-entityHeader-divider,
+.z0sy02rfi_xdU5dQtut6,
+.main-entityHeader-subtitle.main-entityHeader-gray {
+    color: var(--spice-subtext);
+}
+.main-trackList-trackListRow.main-trackList-selected,
+.main-trackList-trackListRow.main-trackList-selected:hover,
+.main-trackList-trackListRow:focus-within,
+.main-trackList-trackListRow:hover {
+    background-color: var(--spice-card);
+}
+.JPrAV8zjE6LXyDQ3sCcg,
+.NKjPwGdhYsd76cjIEqwP,
+._o8Iuf_330KFh6L9Os2E,
+.lSWQl_XnpXurz5WK2mpA {
+    background-color: var(--spice-card);
+}

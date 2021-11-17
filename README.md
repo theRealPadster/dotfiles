@@ -9,6 +9,9 @@ Personal repository to host my custom config files. To use, install [yadm](https
 * Added three terminal colour schemes: Bright-and-bold, Nord, Snazzy, and Mitsuyoshi (pictured below)
 ![Mitsuyoshi scheme screenshot](https://i.imgur.com/TElTRhU.png)
 
+### Spicetify themes
+* Added a couple Spicetify themes that aren't on GitHub
+
 ### Fish
 * Add [nvm](https://github.com/derekstavis/plugin-nvm) plugin
 * Add [foreign-env](https://github.com/oh-my-fish/plugin-foreign-env) plugin
