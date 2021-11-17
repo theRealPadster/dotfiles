@@ -205,9 +205,6 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 .Root__top-bar {
     margin: 35px 0 0 -250px;
 }
-.main-userWidget-box {
-    display: none;
-}
 .main-navBar-navBar {
     padding-top: 0;
 }
@@ -233,7 +230,7 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 }
 .main-type-mestoBold {
     font-weight: normal;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
 }
 .main-trackList-trackListHeader {
     position: unset;
@@ -273,6 +270,21 @@ input {
     cursor: w-resize;
 }
 
+/* User menu */
+/*
+.main-userWidget-box {
+    display: none;
+}
+*/
+.main-topBar-container {
+    max-width: 100%;
+}
+
+/* Fix header spacing on macOS */
+.spotify__os--is-macos .Root__top-bar {
+    margin-top: 26px;
+}
+
 /** Window controls background */
 div#main {
     background-image: linear-gradient(#4a5b6b, #4a5b6b);
@@ -299,3 +311,4 @@ div#main {
 .lSWQl_XnpXurz5WK2mpA {
     background-color: var(--spice-card);
 }
+
