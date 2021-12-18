@@ -293,7 +293,7 @@ input {
 }
 
 /** Window controls background */
-div#main {
+.spotify__os--is-windows div#main {
     background-image: linear-gradient(#4a5b6b, #4a5b6b);
     background-repeat: no-repeat;
     background-position: top right;
