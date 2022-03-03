@@ -17,6 +17,7 @@ export PATH="$PATH:$HOME/.yarn/bin"
 test -e ~/.darwin &&
   export CLICOLOR=1 &&
   export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin" &&
+  export PATH="$PATH:/opt/homebrew/bin" &&
   alias addr="ifconfig | grep -Eo '([0-9]+\.){3}([0-9]+)' | grep -Ev '255\$|(127.0.0.1)|(255.255.255.0)'" &&
   alias update="brew update && echo '...' && brew outdated && brew outdated --cask --greedy"
 
