@@ -12,7 +12,13 @@ yadm submodule update --recursive --init
 system_type=$(uname -s)
 
 case "$system_type" in
+  # -------
+  # macOS
+  # -------
   "Darwin")
+    # make file to indicate OS for cross-shell config compatibility
+    touch "$HOME/.darwin"
+
     # possibly add something here to ensure iTerm2 is installed using Homebrew
     # cask like in the previous example
     if [ -d "$HOME/.iterm2" ]; then
@@ -23,9 +29,22 @@ case "$system_type" in
       # Tell iTerm2 to use the custom preferences in the directory
       defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
     fi
-    # make file to indicate OS for cross-shell config compatibility
-    touch "$HOME/.darwin"
+
+    # install homebrew if it's missing
+    if ! command -v brew >/dev/null 2>&1; then
+      echo "Installing homebrew"
+      /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    fi
+
+    if [ -f "$HOME/.Brewfile" ]; then
+      echo "Updating homebrew bundle"
+      brew bundle --global
+    fi
   ;;
+
+  # -------
+  # Linux
+  # -------
   "Linux")
     # make file to indicate OS for cross-shell config compatibility
     touch "$HOME/.linux"
