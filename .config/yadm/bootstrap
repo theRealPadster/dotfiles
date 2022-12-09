@@ -50,3 +50,6 @@ case "$system_type" in
     touch "$HOME/.linux"
   ;;
 esac
+
+echo "Now run the command to install oh-my-fish (https://github.com/oh-my-fish/oh-my-fish)"
+echo "And run the command to install nvm (https://github.com/nvm-sh/nvm#installing-and-updating"
