@@ -5,6 +5,9 @@ source ~/.shell-env
 # source ~/.shell-keys
 #set -Ua fish_user_paths (yarn global bin)
 
+function last_history_item; echo $history[1]; end
+abbr -a !! --position anywhere --function last_history_item
+
 # Set up OMF Scorphish theme prompt
 set -g theme_display_node yes
 set -g theme_display_virtualenv no

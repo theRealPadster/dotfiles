@@ -1,12 +1,3 @@
-function bind_bang
-  switch (commandline -t)
-  case "!"
-    commandline -t $history[1]; commandline -f repaint
-  case "*"
-    commandline -i !
-  end
-end
-
 function bind_dollar
   switch (commandline -t)
   case "!"
@@ -17,7 +8,6 @@ function bind_dollar
   end
 end
 
-bind ! bind_bang
 bind '$' bind_dollar
 
 # ctrl+backspace
