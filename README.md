@@ -15,7 +15,6 @@ Personal repository to host my custom config files. To use, install [yadm](https
 ### Fish
 * Add [nvm](https://github.com/derekstavis/plugin-nvm) plugin
 * Add [foreign-env](https://github.com/oh-my-fish/plugin-foreign-env) plugin
-* Add [peco](https://github.com/oh-my-fish/plugin-peco) plugin
 * Set [Scorphish](https://github.com/oh-my-fish/theme-scorphish) theme
   * Only show Node version in prompt
 * Set `$EDITOR` to `vim`

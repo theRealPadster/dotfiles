@@ -14,5 +14,3 @@ bind '$' bind_dollar
 bind \b 'backward-kill-word'
 # ctrl+del
 bind \e\[3\;5~ 'kill-word'
-# ctrl+r
-bind \cr 'peco_select_history (commandline -b)'
