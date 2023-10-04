@@ -3,6 +3,7 @@ export EDITOR="vim"
 alias vi="vim"
 alias online="ping 8.8.8.8"
 alias ll="ls -l"
+alias hostname="echo $hostname"
 export SPICETIFY_CONFIG="$HOME/.config/spicetify"
 # TODO: this seems to append a new one every time (on fish at least). Maybe clean it up in the future
 # Fish has `fish_add_path` to add to paths without duplicates, but that's not shell-agnostic
