@@ -17,7 +17,8 @@ export PATH="$PATH:$HOME/.yarn/bin"
 # Can I make it better somehow?
 test -e ~/.darwin &&
   export CLICOLOR=1 &&
-  export PATH="$PATH:/opt/homebrew/bin" &&
+  # Add Homebrew's executable directory to the front of the PATH
+  export PATH="/opt/homebrew/bin:$PATH" &&
   export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" &&
   alias addr="ifconfig | grep -Eo '([0-9]+\.){3}([0-9]+)' | grep -Ev '255\$|(127.0.0.1)|(255.255.255.0)'" &&
   alias update="brew update && echo '...' && brew outdated && brew outdated --cask --greedy"
