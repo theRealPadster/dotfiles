@@ -21,7 +21,11 @@ test -e ~/.darwin &&
   export PATH="/opt/homebrew/bin:$PATH" &&
   export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" &&
   alias addr="ifconfig | grep -Eo '([0-9]+\.){3}([0-9]+)' | grep -Ev '255\$|(127.0.0.1)|(255.255.255.0)'" &&
-  alias update="brew update && echo '...' && brew outdated && brew outdated --cask --greedy"
+  alias update="brew update && echo '...' && brew outdated && brew outdated --cask --greedy" &&
+  # Herd injected PHP 8.4 configuration.
+  export HERD_PHP_84_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/84/" &&
+  # Herd injected PHP binary.
+  export PATH="$HOME/Library/Application Support/Herd/bin:$PATH"
 
 test -e ~/.linux &&
   alias ls="ls --color=auto" &&
